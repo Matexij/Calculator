@@ -3,10 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <title>Calculator</title>
-        <link rel="stylesheets" href="style.css" />
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-
+        <div class="calculator">
+            <div id="resultContainer">
+                <div id="inbetweenResult"></div>
+                <input type="text" class="display" id="display" readonly>
+            </div>
+            
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'7'})">7</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'8'})">8</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'9'})">9</button>
+            <button class="btn operator" data-which="107" onclick="appendToDisplayKeyboard({key:'+', which:107})">+</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'4'})">4</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'5'})">5</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'6'})">6</button>
+            <button class="btn operator" data-which="109" onclick="appendToDisplayKeyboard({key:'-',which: 109})">-</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'1'})">1</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'2'})">2</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'3'})">3</button>
+            <button class="btn operator" data-which="106" onclick="appendToDisplayKeyboard({key:'8',which: 106})">*</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'0'})">0</button>
+            <button class="btn" onclick="appendToDisplayKeyboard({key:'.'})">.</button>
+            <button class="btn clear" onclick="clearDisplay()">C</button>
+            <button class="btn operator" data-which="111" onclick="appendToDisplayKeyboard({key:'/',which: 111})">/</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+            
+        </div>
 
         <script src="script.js"></script>
     </body>
